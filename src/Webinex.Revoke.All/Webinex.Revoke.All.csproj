@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="$(MSBuildThisFileDirectory)/Package.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <PackageId>Webinex.Revoke.All</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Webinex.Revoke.Abstractions\Webinex.Revoke.Abstractions.csproj" />
+      <ProjectReference Include="..\Webinex.Revoke\Webinex.Revoke.csproj" />
+      <ProjectReference Include="..\Webinex.Revoke.Middleware\Webinex.Revoke.Middleware.csproj" />
+    </ItemGroup>
+
+</Project>

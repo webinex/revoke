@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinex.Revoke", "Webinex.Revoke\Webinex.Revoke.csproj", "{AC21392F-A8E0-4B19-B24E-B9A0FB377FED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinex.Revoke.Abstractions", "Webinex.Revoke.Abstractions\Webinex.Revoke.Abstractions.csproj", "{11C4C9D9-E405-487F-BD98-1E4CA119AD26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinex.Revoke.All", "Webinex.Revoke.All\Webinex.Revoke.All.csproj", "{7D9037E4-4FA4-4A34-942F-CC69F58B4BA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinex.Revoke.Middleware", "Webinex.Revoke.Middleware\Webinex.Revoke.Middleware.csproj", "{557CE670-7073-4398-B0FD-2D3F78817E9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC21392F-A8E0-4B19-B24E-B9A0FB377FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC21392F-A8E0-4B19-B24E-B9A0FB377FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC21392F-A8E0-4B19-B24E-B9A0FB377FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC21392F-A8E0-4B19-B24E-B9A0FB377FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C4C9D9-E405-487F-BD98-1E4CA119AD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C4C9D9-E405-487F-BD98-1E4CA119AD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C4C9D9-E405-487F-BD98-1E4CA119AD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C4C9D9-E405-487F-BD98-1E4CA119AD26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9037E4-4FA4-4A34-942F-CC69F58B4BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9037E4-4FA4-4A34-942F-CC69F58B4BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9037E4-4FA4-4A34-942F-CC69F58B4BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9037E4-4FA4-4A34-942F-CC69F58B4BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557CE670-7073-4398-B0FD-2D3F78817E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557CE670-7073-4398-B0FD-2D3F78817E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557CE670-7073-4398-B0FD-2D3F78817E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557CE670-7073-4398-B0FD-2D3F78817E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

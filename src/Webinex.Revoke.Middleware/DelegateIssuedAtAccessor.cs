@@ -1,21 +1,18 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 
-namespace Webinex.Revoke.Middleware
+namespace Webinex.Revoke.Middleware;
+
+internal class DelegateIssuedAtAccessor : IRevokeIssuedAtAccessor
 {
-    internal class DelegateIssuedAtAccessor : IRevokeIssuedAtAccessor
+    private readonly Func<HttpContext, DateTime> _accessor;
+
+    public DelegateIssuedAtAccessor(Func<HttpContext, DateTime> accessor)
     {
-        private readonly Func<HttpContext, DateTime> _accessor;
+        _accessor = accessor ?? throw new ArgumentNullException(nameof(accessor));
+    }
 
-        public DelegateIssuedAtAccessor(Func<HttpContext, DateTime> accessor)
-        {
-            _accessor = accessor ?? throw new ArgumentNullException(nameof(accessor));
-        }
-
-        public Task<DateTime> GetAsync(HttpContext context)
-        {
-            return Task.FromResult(_accessor(context));
-        }
+    public Task<DateTime> GetAsync(HttpContext context)
+    {
+        return Task.FromResult(_accessor(context));
     }
 }

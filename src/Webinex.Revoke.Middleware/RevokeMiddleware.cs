@@ -1,43 +1,41 @@
 ﻿using System.Net;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace Webinex.Revoke.Middleware
+namespace Webinex.Revoke.Middleware;
+
+internal class RevokeMiddleware
 {
-    internal class RevokeMiddleware
+    private readonly RequestDelegate _next;
+
+    public RevokeMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
+        _next = next;
+    }
 
-        public RevokeMiddleware(RequestDelegate next)
+    public async Task Invoke(
+        HttpContext context,
+        IRevoke revoke,
+        IRevokeAccessor revokeAccessor,
+        IRevokeIssuedAtAccessor revokeIssuedAtAccessor,
+        IRevokeMiddlewareSettings settings)
+    {
+        if (context.User.Identity?.IsAuthenticated != true)
         {
-            _next = next;
-        }
-
-        public async Task Invoke(
-            HttpContext context,
-            IRevoke revoke,
-            IRevokeAccessor revokeAccessor,
-            IRevokeIssuedAtAccessor revokeIssuedAtAccessor,
-            IRevokeMiddlewareSettings settings)
-        {
-            if (!context.User.Identity.IsAuthenticated)
-            {
-                await _next(context);
-                return;
-            }
-
-            var checks = await revokeAccessor.GetAsync(context);
-            var issuedAt = await revokeIssuedAtAccessor.GetAsync(context);
-            var revoked = await revoke.RevokedAnyAsync(checks, issuedAt);
-
-            if (revoked)
-            {
-                context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
-                context.Response.Headers[settings.RevokedHeaderName] = true.ToString().ToLower();
-                return;
-            }
-
             await _next(context);
+            return;
         }
+
+        var checks = await revokeAccessor.GetAsync(context);
+        var issuedAt = await revokeIssuedAtAccessor.GetAsync(context);
+        var revoked = await revoke.RevokedAnyAsync(checks, issuedAt);
+
+        if (revoked)
+        {
+            context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
+            context.Response.Headers[settings.RevokedHeaderName] = true.ToString().ToLower();
+            return;
+        }
+
+        await _next(context);
     }
 }

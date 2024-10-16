@@ -1,11 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 
-namespace Webinex.Revoke.Middleware
+namespace Webinex.Revoke.Middleware;
+
+public interface IRevokeIssuedAtAccessor
 {
-    public interface IRevokeIssuedAtAccessor
-    {
-        Task<DateTime> GetAsync(HttpContext context);
-    }
+    Task<DateTime> GetAsync(HttpContext context);
 }

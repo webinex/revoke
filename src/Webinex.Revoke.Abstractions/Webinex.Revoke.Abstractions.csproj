@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="$(MSBuildThisFileDirectory)/../Webinex.Revoke.All/Package.props" />
+  <Import Project="$(MSBuildThisFileDirectory)/../Webinex.Revoke.All/Package.props"/>
 
-    <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
-        <PackageId>Webinex.Revoke.Abstractions</PackageId>
-        <RootNamespace>Webinex.Revoke</RootNamespace>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PackageId>Webinex.Revoke.Abstractions</PackageId>
+    <RootNamespace>Webinex.Revoke</RootNamespace>
+  </PropertyGroup>
 
 </Project>

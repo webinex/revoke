@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 
-namespace Webinex.Revoke.Middleware
+namespace Webinex.Revoke.Middleware;
+
+public interface IRevokeAccessor
 {
-    public interface IRevokeAccessor
-    {
-        Task<IEnumerable<RevokeId>> GetAsync(HttpContext context);
-    }
+    Task<IEnumerable<RevokeId>> GetAsync(HttpContext context);
 }

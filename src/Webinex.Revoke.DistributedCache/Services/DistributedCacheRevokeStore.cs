@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
 
-namespace Webinex.Revoke.DistributedCache.Services;
+namespace Webinex.Revoke.DistributedCache;
 
 internal class DistributedCacheRevokeStore<TCache> : IRevokeReadStore, IRevokeWriteStore
     where TCache : IDistributedCache

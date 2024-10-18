@@ -1,6 +1,4 @@
-﻿using Webinex.Revoke.DistributedCache.Services;
-
-namespace Webinex.Revoke.DistributedCache;
+﻿namespace Webinex.Revoke.DistributedCache;
 
 internal static class DistributedCacheSettingsExtensions
 {

@@ -1,4 +1,4 @@
-﻿namespace Webinex.Revoke.DistributedCache.Services;
+﻿namespace Webinex.Revoke.DistributedCache;
 
 internal interface IDistributedCacheSettings
 {

@@ -17,4 +17,8 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Webinex.Revoke.DistributedCache.csproj.DotSettings" />
+  </ItemGroup>
+
 </Project>

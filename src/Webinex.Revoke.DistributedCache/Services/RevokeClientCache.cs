@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
-namespace Webinex.Revoke.DistributedCache.Services;
+namespace Webinex.Revoke.DistributedCache;
 
 internal interface IRevokeClientCache
 {

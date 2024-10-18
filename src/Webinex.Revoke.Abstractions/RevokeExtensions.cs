@@ -1,6 +1,6 @@
 ﻿namespace Webinex.Revoke;
 
-public static class ProtegoRevokeExtensions
+public static class RevokeExtensions
 {
     /// <summary>
     ///     Revokes <paramref name="kind"/> with <paramref name="value"/> issued earlier current moment.

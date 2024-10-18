@@ -6,7 +6,7 @@
 public interface IRevokeReadStore
 {
     /// <summary>
-    ///     Returns <c>True</c> if no matching <paramref name="ids"/> revokes
+    ///     Returns <c>True</c> if any matching <paramref name="ids"/> revokes
     ///     with time greater than or equal to <paramref name="issuedAt"/> found in store.
     ///     <c>False</c> otherwise.
     /// </summary>

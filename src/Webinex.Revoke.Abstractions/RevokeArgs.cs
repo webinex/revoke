@@ -1,14 +1,11 @@
-﻿using System;
+﻿namespace Webinex.Revoke;
 
-namespace Webinex.Revoke
+public class RevokeArgs : RevokeId
 {
-    public class RevokeArgs : RevokeId
-    {
-        public DateTime IssuedBefore { get; }
+    public DateTime IssuedBefore { get; }
         
-        public RevokeArgs(string kind, string value, DateTime issuedBefore) : base(kind, value)
-        {
-            IssuedBefore = issuedBefore;
-        }
+    public RevokeArgs(string kind, string value, DateTime issuedBefore) : base(kind, value)
+    {
+        IssuedBefore = issuedBefore;
     }
 }

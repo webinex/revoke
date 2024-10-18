@@ -1,7 +1,6 @@
-﻿namespace Webinex.Revoke.Middleware
+﻿namespace Webinex.Revoke.Middleware;
+
+internal interface IRevokeMiddlewareSettings
 {
-    internal interface IRevokeMiddlewareSettings
-    {
-        string RevokedHeaderName { get; }
-    }
+    string RevokedHeaderName { get; }
 }

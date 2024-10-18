@@ -1,17 +1,18 @@
 ﻿<Project>
     <PropertyGroup>
         <Title>Webinex Revoke</Title>
-        <PackageVersion>0.0.2</PackageVersion>
+        <PackageVersion>1.0.0-rc1</PackageVersion>
         <Authors>Webinex Dev</Authors>
         <NoWarn>$(NoWarn);CS1591</NoWarn>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <LangVersion>8.0</LangVersion>
-        <Nullable>disable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
         <Description>Easy to use black listing access token</Description>
         <Copyright>Webinex Dev</Copyright>
-        <PackageProjectUrl>https://github.com/webinex/starter-kit</PackageProjectUrl>
-        <License>https://github.com/webinex/starter-kit/LICENSE</License>
-        <RepositoryUrl>https://github.com/webinex/starter-kit</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/webinex/revoke</PackageProjectUrl>
+        <License>https://github.com/webinex/revoke/LICENSE</License>
+        <RepositoryUrl>https://github.com/webinex/revoke</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 </Project>

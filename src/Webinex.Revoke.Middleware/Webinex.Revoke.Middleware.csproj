@@ -2,7 +2,7 @@
   <Import Project="$(MSBuildThisFileDirectory)/../Webinex.Revoke.All/Package.props" />
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackageId>Webinex.Revoke.Middleware</PackageId>
     <RootNamespace>Webinex.Revoke.Middleware</RootNamespace>
   </PropertyGroup>
@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Webinex.Revoke.Abstractions\Webinex.Revoke.Abstractions.csproj" />
-    <ProjectReference Include="..\Webinex.Revoke\Webinex.Revoke.csproj" />
+    <ProjectReference Include="..\Webinex.Revoke.DistributedCache\Webinex.Revoke.DistributedCache.csproj" />
   </ItemGroup>
 
 </Project>

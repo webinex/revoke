@@ -3,16 +3,17 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <PackageId>Webinex.Revoke</PackageId>
-    <RootNamespace>Webinex.Revoke</RootNamespace>
+    <PackageId>Webinex.Revoke.FusionCache</PackageId>
+    <RootNamespace>Webinex.Revoke.FusionCache</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Webinex.Revoke.Abstractions\Webinex.Revoke.Abstractions.csproj" />
+    <ProjectReference Include="..\Webinex.Revoke\Webinex.Revoke.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="ZiggyCreatures.FusionCache" Version="1.4.0" />
   </ItemGroup>
 
 </Project>
